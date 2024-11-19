@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Form from './Form';
+import Lay from './Lay';
+import Ajaxdata from './Ajaxdata';
+import Data2 from './Data2';
+import { BrowserRouter,Route,Router,Routes } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+  
+<Routes>
+<Route index element={<Lay/>} ></Route>       
+<Route path='/form' element={<Form/>}></Route>
+<Route path='/data' element={<Ajaxdata/>}></Route>
+<Route path='/data2' element={<Data2/>}></Route>  
+</Routes>
+</BrowserRouter>
   );
 }
 
